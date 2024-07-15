@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Perro</title>
+    <link rel="stylesheet" href="./css/noris.css">
+    <script>
+        function calcularEdad(fechaNacimiento) {
+            const hoy = new Date();
+            const fechaNac = new Date(fechaNacimiento);
+            let edad = hoy.getFullYear() - fechaNac.getFullYear();
+            const mes = hoy.getMonth() - fechaNac.getMonth();
+            if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNac.getDate())) {
+                edad--;
+            }
+            document.getElementById('edad').textContent = 'Edad: ' + edad + ' años';
+        }
+
+        window.onload = function() {
+            const fechaNacimiento = '2023-01-14';
+            calcularEdad(fechaNacimiento);
+        }
+    </script>
+</head>
+<body>
+    <div class="ficha">
+        <div class="foto">
+            <img src="./images/noris.jpg" alt="noris">
+        </div>
+        <div class="desc">
+            <div class="texto">Noris es una perrita muy linda y le gusta jugar.</div>
+            <div class="categoria">Nombre:</div><p class="info"> Noris</p>
+            <div class="categoria">Sexo:</div><p class="info"> Femenino</p>
+            <div class="categoria">Edad:</div><p id="edad" class="info"></p>
+            <div class="categoria">Castrado/a:</div><p class="info"> Sí</p>
+            <div class="categoria">No de Chip:</div><p class="info"> 123456</p>
+            <div class="categoria">Enfermedades:</div><p class="info"> No</p>
+            <div class="categoria">Tatuajes:</div><p class="info"> No sé</p>
+            <div class="categoria">Dueño:</div><p class="info"> Noelia</p>
+            <div class="categoria">No del Dueño:</div><p class="info"> 091 075 168</p>
+        </div>
+    </div>
+</body>
+</html>

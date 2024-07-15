@@ -1,0 +1,63 @@
+body {
+    background-color: #ffe4e1; /* Rosa pálido */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.ficha {
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 400px;
+    padding: 3%;
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+.desc {
+    padding: 20px;
+}
+
+.texto {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.categoria {
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    width: 40%;
+}
+
+.info {
+    display: inline-block;
+    width: 58%;
+    margin: 0 0 10px 0;
+    color: #666;
+}
+
+#edad {
+    color: #666;
+    display: inline-block;
+    width: 58%;
+    margin: 0 0 10px 0;
+}
+
+@media (max-width: 600px) {
+    .ficha {
+        width: 100%;
+        margin: 20px;
+    }
+}
